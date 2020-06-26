@@ -1,0 +1,47 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Beneficios.aspx.cs" Inherits="ProjetoMVCD19.Beneficios" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Sign IN</title>
+    <link href="../Contents/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4" style="text-align: center; margin-top: 10px">
+                    <asp:Label ID="lblTitulo" runat="server" Font-Size="XX-Large" Text="Descubra a existência de Bêneficios"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label ID="msgerro" runat="server" ForeColor="Red" Text="." Visible="false"></asp:Label>
+                    <br />
+                    <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
+                    <asp:TextBox ID="txtEmailMVCD19" type="email" runat="server" CssClass="form-control"></asp:TextBox>
+
+                    <br/>
+                    <asp:Label ID="lblcpf" runat="server" Text="CPF"></asp:Label>
+                    <asp:TextBox ID="txtCpfMVCD19" type="number" runat="server" CssClass="form-control"></asp:TextBox>
+
+
+                    <br/>
+                    <asp:Label ID="lblnomemae" runat="server" Text="Nome da mãe"></asp:Label>
+                    <asp:TextBox ID="txtnomemaeMVCD19" type="text" runat="server" CssClass="form-control"></asp:TextBox>
+                    <br/>
+
+                    <asp:Button ID="btnEnviar" class="btn btn-lg btn-primary btn-block" runat="server" Text="Enviar" OnClick="btnEnviar_Click"/>
+                    <p>
+
+                    </p>
+                    <asp:LinkButton ID="btncadastrar" class="btn btn-link" runat="server">Não Sou Cadastrado. Clique aqui</asp:LinkButton>
+                    <br />
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
