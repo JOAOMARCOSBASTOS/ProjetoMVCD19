@@ -20,6 +20,8 @@ namespace ProjetoMVCD19
         {
             try
             {
+
+                //teste
                 msgerro.Visible = false;
                 //instanciando o DTO para armazenamento dos dados da tela
                 tblClienteDTOd19 cliente = new tblClienteDTOd19();
