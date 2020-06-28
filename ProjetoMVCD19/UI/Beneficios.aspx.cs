@@ -20,8 +20,6 @@ namespace ProjetoMVCD19
         {
             try
             {
-
-                //teste
                 msgerro.Visible = false;
                 //instanciando o DTO para armazenamento dos dados da tela
                 tblClienteDTOd19 cliente = new tblClienteDTOd19();
@@ -30,19 +28,23 @@ namespace ProjetoMVCD19
                 cliente.Nome_mae = txtnomemaeMVCD19.Text;
                 //consultar o email e a senha no banco;
                 BLLclientesTBLD19 bllCliente = new BLLclientesTBLD19();
-                int beneficio = bllCliente.Autenticar(cliente.Email_cliente, cliente.Cpf_cliente, cliente.Nome_mae);
-                if (beneficio == 1)
+                if (bllCliente.Autenticar(cliente.Email_cliente, cliente.Cpf_cliente, cliente.Nome_mae))
                 {
-                    msgerro.Text = "Beneficiário Localizado no Banco de dados. Processo em Análise";
-
-                }
-                else if(beneficio == 2)
-                {
-                    msgerro.Text = "Beneficiário Não Localizado no Banco de dados. Benefício Negado";
+                    msgerro.Visible = true;
+                    Boolean beneficio = bllCliente.consultarBenefisio(cliente.Email_cliente);
+                    if (beneficio == false)
+                    {
+                        msgerro.Text = "Beneficiário Não Localizado no Banco de dados.Benefício Negado";
+                    }
+                    else if (beneficio == true)
+                    {
+                        msgerro.Text = "Beneficiário Localizado no Banco de dados. Processo em Análise";
+                    }
                 }
                 else
                 {
-                    msgerro.Text = "Cliente não localizado";
+                    msgerro.Visible = true;
+                    msgerro.Text = "Cliente não encontrado";
                 }
             }
             catch (Exception ex)

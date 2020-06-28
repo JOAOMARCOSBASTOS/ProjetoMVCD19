@@ -7,7 +7,7 @@ using System.Web;
 
 namespace ProjetoMVCD19.DAL
 {
-    public class DALMysqlD19
+    public class DALmvcD19
     {
         private MySqlConnection Conexao;
 

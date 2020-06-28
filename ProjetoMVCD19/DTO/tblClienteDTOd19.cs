@@ -34,6 +34,24 @@ namespace ProjetoMVCD19.DTO
 
         }
 
+        public string Cpf_cliente
+        {
+            set
+            {
+                if (value != string.Empty)
+                {
+                    this.cpf_cliente = value;
+                }
+                else
+                {
+                    throw new Exception("O campo CPF é obrigatório");
+                }
+
+            }
+            get { return this.cpf_cliente; }
+
+        }
+
         public string Nome_mae
         {
             set
@@ -52,22 +70,6 @@ namespace ProjetoMVCD19.DTO
 
         }
 
-        public string Cpf_cliente
-        {
-            set
-            {
-                if (value != string.Empty)
-                {
-                    this.cpf_cliente = value;
-                }
-                else
-                {
-                    throw new Exception("O campo Senha é obrigatório");
-                }
 
-            }
-            get { return this.cpf_cliente; }
-
-        }
     }
 }

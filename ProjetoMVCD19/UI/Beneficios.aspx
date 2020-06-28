@@ -33,11 +33,6 @@
                     <br/>
 
                     <asp:Button ID="btnEnviar" class="btn btn-lg btn-primary btn-block" runat="server" Text="Enviar" OnClick="btnEnviar_Click"/>
-                    <p>
-
-                    </p>
-                    <asp:LinkButton ID="btncadastrar" class="btn btn-link" runat="server">Não Sou Cadastrado. Clique aqui</asp:LinkButton>
-                    <br />
                 </div>
                 <div class="col-md-4"></div>
             </div>

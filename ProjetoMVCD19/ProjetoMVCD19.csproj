@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BancoDeDados\ProjetoMVCD19.sql" />
     <Content Include="Contet\bootstrap-grid.css" />
     <Content Include="Contet\bootstrap-grid.min.css" />
     <Content Include="Contet\bootstrap-reboot.css" />
@@ -166,7 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BLLclientesTBLD19.cs" />
-    <Compile Include="DAL\DALMysqlD19.cs" />
+    <Compile Include="DAL\DALmvcD19.cs" />
     <Compile Include="DTO\tblClienteDTOd19.cs" />
     <Compile Include="UI\Beneficios.aspx.cs">
       <DependentUpon>Beneficios.aspx</DependentUpon>
